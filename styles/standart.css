@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: rgb(248, 161, 79);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  background-color: rgb(248, 161, 79);
+  display: flex;
+  justify-content: center;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 420px) {
+  .menu-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 350px) {
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.nav-li {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: rgb(248, 161, 79);
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+.nav-li:hover {
+  color: rgb(0, 0, 0);
+}
+.itaFood-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-logo {
+  position: absolute;
+  background-color: black;
+  height: 120px;
+  width: 120px;
+  padding: 3px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.content-wrapper {
+  display: flex;
+  padding: 2px;
+  min-height: calc(100vh - 200px);
+}
+
+.footer {
+  height: 120px;
+  background-color: rgb(248, 161, 79);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
