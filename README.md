@@ -1,105 +1,94 @@
-<div align="center">
+# 🍕 ItaFood – Bestell-App
 
-<img src="img/Logo/Logo.png" alt="ItaFood Logo" width="160" />
-
-# ItaFood – Bestell-App
-
-Ein responsiver Online-Bestellservice für ein italienisches Restaurant, gebaut mit Vanilla JavaScript und Bootstrap.
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)
-
-</div>
+🍝 Online-Bestellung für ein italienisches Restaurant  
+💻 HTML | CSS | JavaScript | Bootstrap  
+📍 Schweiz  
 
 ---
 
-## Inhaltsverzeichnis
+## 🚀 Über das Projekt
 
-- [Über das Projekt](#über-das-projekt)
-- [Funktionen](#funktionen)
-- [Tech-Stack](#tech-stack)
-- [Projektstruktur](#projektstruktur)
-- [Lokal starten](#lokal-starten)
-- [Preise und Lieferkosten](#preise-und-lieferkosten)
-- [Mögliche Erweiterungen](#mögliche-erweiterungen)
-- [Autor](#autor)
+ItaFood ist eine Bestell-App, mit der man Pizza, Pasta, Desserts und Getränke auswählen und über einen Warenkorb bestellen kann.  
+Der Fokus liegt auf **sauberer Trennung von Daten, Logik und Templates** und einer Oberfläche, die auf Desktop und Mobilgeräten funktioniert.
 
-## Über das Projekt
+Das Projekt kommt ohne Framework und ohne Build-Schritt aus.
 
-ItaFood ist eine Single-Page-Anwendung, mit der Gäste Pizza, Pasta, Desserts und Getränke auswählen und in einem Warenkorb bestellen können. Die Speisekarte wird aus einer Datenquelle gerendert, der Warenkorb berechnet Zwischensumme, Lieferkosten und Gesamtsumme automatisch.
+---
 
-Das Projekt kommt ohne Build-Schritt und ohne Framework aus. Der Fokus liegt auf sauberer Trennung von Daten, Logik und Templates sowie auf einer Oberfläche, die auf Desktop und Mobilgeräten funktioniert.
+## ✨ Features
 
-## Funktionen
+- 🍕 Speisekarte mit Pizza, Pasta, Desserts und Drinks
+- 🛒 Warenkorb mit Mengenänderung und Entfernen von Produkten
+- 💰 Automatische Berechnung von Zwischensumme, Lieferkosten und Gesamtsumme
+- 📱 Responsives Layout: Auf kleinen Bildschirmen öffnet sich der Warenkorb als Modal
+- 🔔 Zähler am Warenkorb-Button für weitere hinzugefügte Artikel
+- 🎉 Bestellbestätigung nach dem Absenden
 
-- **Speisekarte mit vier Kategorien:** Pizza, Pasta, Desserts und Getränke, mit Sprungmarken im Menü
-- **Warenkorb:** Produkte per Klick hinzufügen, Menge erhöhen oder verringern, Positionen entfernen
-- **Automatische Berechnung:** Zwischensumme, Lieferkosten und Gesamtsumme in CHF
-- **Responsives Layout:** Auf dem Desktop ist der Warenkorb dauerhaft sichtbar, auf kleinen Bildschirmen (bis 768 px) öffnet er sich als Modal
-- **Hinweis auf neue Artikel:** Ein Zähler am Warenkorb-Button zeigt weitere hinzugefügte Produkte
-- **Bestellbestätigung:** Nach dem Absenden wird der Warenkorb geleert und eine Bestätigung angezeigt
+---
 
-## Tech-Stack
+## 🧠 Tech Stack
 
-| Bereich | Technologie |
-| --- | --- |
-| Markup | HTML5 |
-| Styling | CSS3, Bootstrap 5.3 (per CDN) |
-| Logik | Vanilla JavaScript (ES6) |
-| Daten | Lokale JavaScript-Datenstruktur (`js/db.js`) |
+**Frontend**
+- HTML5
+- CSS3
+- JavaScript (Vanilla, ES6)
+- Bootstrap 5.3 (per CDN)
 
-## Projektstruktur
+**Konzepte**
+- DOM Manipulation
+- Template-Funktionen für die Darstellung
+- Modulare Dateistruktur
+
+---
+
+## 📁 Projektstruktur
 
 ```text
 bestellApp/
-├── index.html            # Seitenstruktur und Warenkorb-Modal
+├── index.html
 ├── js/
-│   ├── db.js             # Speisekarte und Warenkorb-Status
-│   ├── script.js         # Anwendungslogik (Warenkorb, Berechnung, Bestellung)
-│   └── templates.js      # HTML-Templates für Karten, Warenkorb und Bestätigung
-├── styles/
-│   ├── standart.css      # Grundlayout
-│   ├── menu.css          # Speisekarte
-│   ├── basket.css        # Warenkorb
-│   └── assets.css        # Allgemeine Elemente
-└── img/                  # Logos, Favicons, Icons und Bilder
+│   ├── db.js          # Speisekarte und Warenkorb
+│   ├── script.js      # Logik: Warenkorb, Berechnung, Bestellung
+│   └── templates.js   # HTML-Templates
+├── styles/            # CSS-Dateien
+└── img/               # Logos, Icons, Bilder
 ```
 
-## Lokal starten
+---
 
-Es sind keine Abhängigkeiten oder Build-Schritte nötig.
+## ⚙️ Lokal starten
 
 ```bash
 git clone https://github.com/ball82/bestellApp.git
 cd bestellApp
 ```
 
-Danach `index.html` im Browser öffnen oder einen lokalen Webserver verwenden, zum Beispiel:
+Danach `index.html` im Browser öffnen oder einen lokalen Server starten:
 
 ```bash
 npx serve .
 ```
 
-Bootstrap wird über ein CDN geladen, daher ist beim ersten Start eine Internetverbindung erforderlich.
+---
 
-## Preise und Lieferkosten
+## 💶 Lieferkosten
 
-| Regel | Wert |
-| --- | --- |
-| Währung | CHF |
-| Lieferkosten bei Bestellungen bis 25.00 CHF | 5.00 CHF |
-| Lieferkosten bei Bestellungen über 25.00 CHF | kostenlos |
+| Bestellwert | Lieferkosten |
+|-------------|--------------|
+| bis 25.00 CHF | 5.00 CHF |
+| über 25.00 CHF | kostenlos |
 
-## Mögliche Erweiterungen
+---
 
-- Warenkorb im `localStorage` speichern, damit er nach dem Neuladen erhalten bleibt
-- Bestellformular mit Adresse und Zahlungsart
-- Anbindung an ein Backend zum Speichern von Bestellungen
-- Impressum und Datenschutzerklärung als eigene Seiten
+## 📌 Ideen für die Weiterentwicklung
 
-## Autor
+🎯 Warenkorb im `localStorage` speichern  
+🚀 Bestellformular mit Adresse und Zahlungsart  
+🧠 Backend zum Speichern der Bestellungen  
 
-**Joannis Ballos**
-Portfolio: [bajo-dev.ch](https://www.bajo-dev.ch) · GitHub: [@ball82](https://github.com/ball82)
+---
+
+## 📫 Kontakt
+
+🌐 Portfolio: [www.bajo-dev.ch](https://www.bajo-dev.ch)  
+💻 GitHub: [@ball82](https://github.com/ball82)
